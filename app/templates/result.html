@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DDoS Detection Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>DDoS Detection Results</h1>
+    <p>Entropy: {{ entropy }}</p>
+    <p>Status: {{ status }}</p>
+    <h2>Traffic Logs</h2>
+    <ul>
+        {% for ip, count in logs.items() %}
+            <li>{{ ip }}: {{ count }} requests</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
